@@ -1,0 +1,29 @@
+{% extends 'index/layout.html' %} {% block content %}
+
+<h2 style="text-align: center; font-size: 20px;">TRABAJOS REALIZADOS</h2>
+<div class="container">
+    <div class="row">
+
+        <!-- VER MAÑANA 14 ELIMINAR TODOS LOS PRODUCTOS Y AGREGAR AL MODELS UN ID -->
+        <!--  for trabajoId in trabajoIdPar-->
+
+        <!-- <p>{{trabajo}}</p>  -->
+        {% for trabajo in trabajos %}
+
+        <div class="col-md-7" style="margin: 20px auto;">
+            <div class="card">
+                <img src="{{trabajo.imagen.url}}" alt="">
+                <div class="card-body" style="text-align:center;">
+                    <p class="card-title">{{trabajo.nombre}}</p>
+                    <p class="card-text">{{trabajo.descripcion}}&nbsp;</p>
+                </div>
+
+
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+</div>
+
+{% endblock %}

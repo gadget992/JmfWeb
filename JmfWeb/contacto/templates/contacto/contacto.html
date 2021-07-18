@@ -1,0 +1,20 @@
+{% extends 'index/layout.html' %} {% block content %}
+
+
+<div class="container" style="margin-top: 20px;">
+    {% if "valido" in request.GET %}
+    <p style="color:white;">mensaje enviado, nos pondremos en contacto a la brevedad</p>
+    {% endif %} {% if "novalido" in request.GET %}
+    <p style="color:white;">ERROR AL ENVIAR EL MENSAJE,INTENTALO DE NUEVO</p>
+    {% endif %}
+
+
+    <form action="" method="POST">{% csrf_token %}
+        <table style="color: white;">
+            {{formulario.as_p}}
+        </table>
+        <input type="submit" value="ENVIAR CONSULTA" style="display: block; margin: 20px auto;">
+    </form>
+</div>
+
+{% endblock %}

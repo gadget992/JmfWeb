@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'index/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'index/css/styles.css' %}" rel="stylesheet">
+
+    <!-- ver el titulo para que en cada pestaña se abra con la que corresponde -->
+    <title>Inicio</title>
+
+
+</head>
+
+<body>
+
+    <!-- PARTE DE ARRIBA DEL HTML, COMPRENDE EL LOGO, NOMBRE EMPRESA Y EL NAV -->
+    <section class="cabecera">
+        <div class="titulo">
+            <div class="contenedor-logo">
+                <img src="{% static 'index/img/logo2.png' %}" alt="">
+            </div>
+
+            <h1>Serigrafia Textil</h1>
+        </div>
+
+        <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
+            <div class="container">
+                <button class="navbar-toggler" style="margin: 0 auto;" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav mx-auto">
+                        {% if not request.path == '/' %}
+                        <li class="nav-item px-lg-4">
+                            <!-- <a class="nav-link text-uppercase text-expanded" href="{% url 'quienes_somos' %}">Quienes Somos</a> -->
+                            <a class="nav-link text-uppercase text-expanded" href="{% url 'index' %}">Inicio</a>
+                        </li>
+                        {% endif %} {% if request.path == '/' %}
+                        <li class="nav-item px-lg-4">
+                            <!-- <a class="nav-link text-uppercase text-expanded" href="{% url 'nuestros_servicios' %}">Servicios</a> -->
+                            <a class="nav-link text-uppercase text-expanded" href="#servicios">Servicios</a>
+                        </li>
+                        <li class="nav-item px-lg-4">
+                            <!-- <a class="nav-link text-uppercase text-expanded" href="{% url 'quienes_somos' %}">Quienes Somos</a> -->
+                            <a class="nav-link text-uppercase text-expanded" href="#quienes_somos">Quienes Somos</a>
+                        </li>
+
+
+                        {% elif not request.path == '/' %}
+
+                        <li class="nav-item px-lg-4">
+                            <!-- <a class="nav-link text-uppercase text-expanded" href="{% url 'quienes_somos' %}">Quienes Somos</a> -->
+                            <a class="nav-link text-uppercase text-expanded" href="{% url 'quienes_somos' %}">Quienes Somos</a>
+                        </li>
+                        <li class="nav-item px-lg-4">
+                            <!-- <a class="nav-link text-uppercase text-expanded" href="{% url 'nuestros_servicios' %}">Servicios</a> -->
+                            <a class="nav-link text-uppercase text-expanded" href="{% url 'nuestros_servicios' %}">Servicios</a>
+                        </li>
+                        {% endif %} {% if not request.path == 'quienes_somos' %} {% endif %} {% if not request.path == '/trabajos/' %}
+                        <li class="nav-item px-lg-4">
+                            <a class="nav-link text-uppercase text-expanded" href="{% url 'trabajos_realizados' %}">Trabajos Realizados</a>
+                        </li>
+                        {% endif %}
+
+                        <li class="nav-item px-lg-4">
+                            <a class="nav-link text-uppercase text-expanded" href="{% url 'cotizador' %}">Cotizador de n/ precios</a>
+                        </li>
+                        <li class="nav-item {% if request.path == '/contacto/' %} active {% endif %} px-lg-4">
+                            <a class="nav-link text-uppercase text-expanded" href="{% url 'contacto' %}">Contacto</a>
+                        </li>
+
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </section>
+
+    {% block content %} {% endblock %}
+
+
+    <footer style="text-align: center;">
+        <p>Todos los derechos reservados</p>
+        <p>@copyright</p>
+    </footer>
+
+
+    <script src="{% static 'index/vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'index/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'index/vendor/bootstrap/js/cotizador.js' %}"></script>
+
+</body>
+
+</html>

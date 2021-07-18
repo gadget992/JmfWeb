@@ -1,0 +1,102 @@
+body {
+    background-color: grey;
+    margin: 0 auto;
+    font-family: Fira Sans;
+}
+
+h2 {
+    font-size: 20px;
+    margin: 20px auto;
+}
+
+
+/* ---------HEADER Y NAV--------------- */
+
+.cabecera {
+    background-color: #F58634;
+}
+
+.titulo {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.titulo h1 {
+    font-size: 30px;
+    padding-top: 20px;
+}
+
+.contenedor-logo img {
+    width: 20%;
+}
+
+nav button {
+    color: black;
+}
+
+@media(min-width: 800px) {
+    .titulo {
+        display: flex;
+        text-align: left;
+    }
+    .contenedor-logo img {
+        width: 40%;
+        margin-left: 20px;
+    }
+    .contenedor-logo {
+        width: 20%;
+    }
+    .titulo h1 {
+        align-self: center;
+    }
+    .carousel-item img {
+        width: 60%;
+        height: 500px;
+    }
+}
+
+
+/* 
+----------------------QUIENES SOMOS, SERVICIOS---------- */
+
+.quienes_somos,
+.servicios {
+    margin-top: 20px;
+    padding-top: 20px;
+    margin-bottom: 0;
+    text-align: center;
+    background-color: #0957C3;
+}
+
+.servicios,
+.quienes_somos {
+    padding-bottom: 20px;
+    margin-top: 0;
+    padding-top: 20px;
+}
+
+.quienes_somos h2,
+.servicios h2 {
+    text-align: center;
+    color: white;
+}
+
+.quienes_somos p {
+    margin: 0;
+}
+
+footer {
+    background-color: #F58634;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+.letra-total-grande {
+    background-color: black;
+    text-align: center;
+    color: white;
+    padding: 10px 5px;
+}

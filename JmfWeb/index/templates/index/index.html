@@ -1,0 +1,54 @@
+{% extends 'index/layout.html' %} {% load static %} {% block content %}
+
+<p style="text-align: center; padding-top: 20px;"> Últimos trabajos</p>
+
+
+<div id="carousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators" style="bottom: -10px;">
+        <li data-target="#carousel" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel" data-slide-to="1"></li>
+        <li data-target="#carousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+
+        <div class="carousel-item active" style="text-align: center;">
+
+            <img src="{{ trabajos_antepenultimo.imagen.url }}" width="70%" alt="first-slide">
+            <p>{{ trabajos_antepenultimo.nombre }}</p>
+        </div>
+
+        <!-- IMG SIGUIENTES SIN MANEJO DE PYTHON -->
+        <div class="carousel-item" style="text-align: center;">
+            <img src="{{ trabajos_penultimo.imagen.url }}" width="70%" alt="second-slide">
+            <p>{{ trabajos_penultimo.nombre }}</p>
+        </div>
+        <div class="carousel-item" style="text-align: center;">
+            <img src="{{ trabajos_ultimo.imagen.url }}" width="70%" alt="third-slide">
+            <p>{{ trabajos_ultimo.nombre }}</p>
+        </div>
+    </div>
+    <!-- carousel-inner -->
+    <a href="#carousel" class="carousel-control-prev" role="button" data-slide-to="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a href="#carousel" class="carousel-control-next" role="button" data-slide-to="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+<div class="quienes_somos" id="quienes_somos">
+    <h2>QUIENES SOMOS</h2>
+
+    <p>
+        <p>JMF serigrafia textil es una empresa que nació en el año bla bla Rentabilidad, compromiso y asesoramiento en pos de acercarnos al estampado ideal para emprendedores de indumentaria
+        </p>
+</div>
+
+<div class="servicios" id="servicios">
+    <h2>NUESTROS SERVICIOS</h2>
+
+    <p>JMF serigrafia textil es una empresa que nació en el año bla bla</p>
+</div>
+{% endblock %}
