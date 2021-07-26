@@ -1,9 +1,7 @@
 {% extends 'index/layout.html' %} {% load static %} {% block content %}
 
-<p style="text-align: center; padding-top: 20px;"> Últimos trabajos</p>
-
-
 <div id="carousel" class="carousel slide" data-ride="carousel">
+    <h2 style="text-align: center; padding-top: 20px;"> Trabajos realizados</h2>
     <ol class="carousel-indicators" style="bottom: -10px;">
         <li data-target="#carousel" data-slide-to="0" class="active"></li>
         <li data-target="#carousel" data-slide-to="1"></li>
@@ -14,17 +12,23 @@
         <div class="carousel-item active" style="text-align: center;">
 
             <img src="{{ trabajos_antepenultimo.imagen.url }}" width="70%" alt="first-slide">
+             <div class="parrafo-carousel">
             <p>{{ trabajos_antepenultimo.nombre }}</p>
+            </div>
         </div>
 
         <!-- IMG SIGUIENTES SIN MANEJO DE PYTHON -->
         <div class="carousel-item" style="text-align: center;">
             <img src="{{ trabajos_penultimo.imagen.url }}" width="70%" alt="second-slide">
+             <div class="parrafo-carousel">
             <p>{{ trabajos_penultimo.nombre }}</p>
+            </div>
         </div>
         <div class="carousel-item" style="text-align: center;">
             <img src="{{ trabajos_ultimo.imagen.url }}" width="70%" alt="third-slide">
+            <div class="parrafo-carousel">
             <p>{{ trabajos_ultimo.nombre }}</p>
+            </div>
         </div>
     </div>
     <!-- carousel-inner -->
@@ -38,17 +42,25 @@
     </a>
 </div>
 
-<div class="quienes_somos" id="quienes_somos">
-    <h2>QUIENES SOMOS</h2>
+<div class="container ofertas">
+    <div class="quienes_somos" id="quienes_somos">
+        <h2>QUIENES SOMOS</h2>
 
-    <p>
-        <p>JMF serigrafia textil es una empresa que nació en el año bla bla Rentabilidad, compromiso y asesoramiento en pos de acercarnos al estampado ideal para emprendedores de indumentaria
-        </p>
-</div>
+        <p>
+            <p>JMF Serigrafia Textil es una empresa familiar con más de 20 años de trayectoria en la provincia de Cordoba. La serigrafia es un proceso artesanal en el que nos hemos
+            ido especializando con el tiempo. Tenemos como misión brindarte un estampado de calidad para tu emprendimiento de indumentaria. Rentabilidad, compromiso y asesoramiento en pos de acercarnos al estampado ideal.
+            </p>
+    </div>
 
-<div class="servicios" id="servicios">
-    <h2>NUESTROS SERVICIOS</h2>
+    <div class="servicios container" id="servicios">
+        <h2>NUESTROS SERVICIOS</h2>
 
-    <p>JMF serigrafia textil es una empresa que nació en el año bla bla</p>
+        <p>Entre los servicios que nos especializamos, están los estampados centrales, ya sean en remeras, mantas, bodys, entre otros, los cuales
+        trabajamos con pinturas al agua o plastisoles. La pintura al agua brinda un mayor tacto cero, pareciendo que la pintura está en la tela sin afectar
+        su textura. Los plastisoles, entre tanto, son pinturas mas plásticas, que dependiendo del diseño y sobre el estampado de una tela, puede variar su tacto,
+        pero siempre en nuestra empresa le brindamos un planchado a traves de transfer que deja el estampado con una textura lisa y más brillante.
+        Nuestro producto estrella son los estampados en tela por metroy los estampados
+        por metro.</p>
+    </div>
 </div>
 {% endblock %}

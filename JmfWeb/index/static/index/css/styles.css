@@ -1,11 +1,18 @@
+html {
+    min-height: 100%;
+    position: relative;
+}
+
 body {
-    background-color: grey;
     margin: 0 auto;
-    font-family: Fira Sans;
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+    background-image: url("../img/tiny-squares.png");
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 h2 {
-    font-size: 20px;
+    font-size: 25px;
     margin: 20px auto;
 }
 
@@ -13,7 +20,7 @@ h2 {
 /* ---------HEADER Y NAV--------------- */
 
 .cabecera {
-    background-color: #F58634;
+    background-color: rgba(245, 134, 52, 0.8);
 }
 
 .titulo {
@@ -27,11 +34,29 @@ h2 {
 }
 
 .contenedor-logo img {
-    width: 20%;
+    width: 15%;
 }
 
 nav button {
     color: black;
+}
+
+.parrafo-carousel p {
+    display: inline;
+    padding: 10px 5px;
+    background-color: rgba(245, 134, 52, 0.8);
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.carousel-item {
+    margin-bottom: 25px;
+}
+
+.carousel-item img {
+    width: 80%;
+    height: 200px;
+    margin-bottom: 20px;
 }
 
 @media(min-width: 800px) {
@@ -48,31 +73,40 @@ nav button {
     }
     .titulo h1 {
         align-self: center;
+        font-size: 2em;
     }
     .carousel-item img {
         width: 60%;
         height: 500px;
+        margin-bottom: 25px;
+    }
+    .contenedor-barra {
+        text-align: center;
+    }
+    .carousel-item {
+        padding-bottom: 30px;
+    }
+    .carousel h2 {
+        font-size: 2em;
     }
 }
 
 
-/* 
-----------------------QUIENES SOMOS, SERVICIOS---------- */
+/*
+  ----------------------QUIENES SOMOS, SERVICIOS---------- */
 
 .quienes_somos,
 .servicios {
     margin-top: 20px;
-    padding-top: 20px;
+    padding: 20 0 20 0px;
     margin-bottom: 0;
     text-align: center;
-    background-color: #0957C3;
 }
 
-.servicios,
-.quienes_somos {
-    padding-bottom: 20px;
-    margin-top: 0;
-    padding-top: 20px;
+.ofertas {
+    background-color: rgba(9, 87, 195, 0.8);
+    border-radius: 10px;
+    padding: 25px 0 25px 0;
 }
 
 .quienes_somos h2,
@@ -85,13 +119,75 @@ nav button {
     margin: 0;
 }
 
+
+/*
+  ----------------------TRABAJOS REALIZADOS---------- */
+
+.card img {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto
+}
+
+
+/*----------------------TRABAJOS REALIZADOS---------- */
+
+#cotizar-estampa {
+    margin-bottom: 25px;
+    padding: 15px 15px;
+    border-radius: 10px;
+    color: white;
+    background-color: rgb(9, 87, 195);
+}
+
+.especificacion-cotizacion {
+    background-color: rgba(9, 87, 195, 0.8);
+    padding: 15px 15px;
+    border-radius: 10px;
+}
+
+.etiqueta-cotizador {
+    display: block;
+    text-align: center;
+}
+
+#colores {
+    display: block;
+    margin: 0 auto;
+}
+
+#metros {
+    display: block;
+    margin: 0 auto;
+}
+
+
+/*----------------------CONTACTO---------- */
+
+.tabla-contacto {
+    color: white;
+    background-color: rgb(9, 87, 195);
+    padding: 15px 15px;
+    border-radius: 10px;
+}
+
+table {
+    border-collapse: unset;
+}
+
+
+/*----------------------FOOTER---------- */
+
 footer {
     background-color: #F58634;
     padding: 20px 0;
+    /*position: absolute;*/
+    /*width:100%;*/
+    /*bottom: 0;*/
 }
 
 footer p {
-    margin: 0;
+    margin: 0px;
 }
 
 .letra-total-grande {

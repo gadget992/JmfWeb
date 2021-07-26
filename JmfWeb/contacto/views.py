@@ -18,11 +18,11 @@ def contacto(request):
             #para el email que llega
             email = EmailMessage("mensaje desde app django",
             "el usuario con nombre {}, con la direccion {}, escribe lo siguiente: \n \n {}".format(nombre, email, consulta),
-            "", ["fernandezdavid1992@gmail.com"], reply_to = [email])
+            "", ["martin.orteguita2020@gmail.com"], reply_to = [email])
 
             try:
                 email.send()
-                return redirect('/contacto/?novalido')
+                return redirect('/contacto/?valido')
             
             except:
                 return redirect('/contacto/?novalido')

@@ -7,13 +7,13 @@
 
         <form class="mt-10 max-w-lg mx-auto" action="#" id="cotizar-estampa">
             <div class="flex items-center mb-5">
-                <label class="font-bold  uppercase mr-2 w-20" for="metros">Cantidad metros:</label>
+                <label class="font-bold  uppercase mr-2 w-20 etiqueta-cotizador" for="metros">Cantidad metros:</label>
                 <input type="number" id="metros" class="flex-1 p-0 appearance-none" style="width: 25%; height: 35px;">
             </div>
             <div class="flex items-center mb-5">
-                <label class="font-bold  uppercase mr-2 w-20" for="colores">Cantidad colores: </label>
+                <label class="font-bold  uppercase mr-2 w-20  etiqueta-cotizador" for="colores">Cantidad colores: </label>
                 <select class="flex-1 bg-gray-100 p-2 appearance-none" style="width: 25%; height: 35px;" id="colores">
-                            
+
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -40,12 +40,13 @@
         </form>
     </div>
     <!--#contenido-->
-    <div>
+    <div class="especificacion-cotizacion">
         <p>Tené en cuenta que el mínimo de metros a estampar es de 60 metros. El cálculo de metros es lineal, siendo el máximo de ancho 1,70metros. Dentro del presupuesto está incluida la matriz, la cual te la guardamos por un tiempo determinado, es decir,
             si dentro de dos meses queres realizar la misma estampa, solo se abona la estampa. Los dibujos son todos pintura al agua, no curbritivas. Cualquier consulta no dudes en contactarnos
         </p>
     </div>
 </div>
+
 
 
 {% endblock %}

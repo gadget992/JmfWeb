@@ -122,9 +122,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 
-PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
+
 
 
 #ver bien esto, si media_url esta comentado, no me cargan algunas url
@@ -137,5 +137,5 @@ EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 EMAIL_HOST = "smtp.gmail.com"
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
-EMAIL_HOST_USER = "fernandezdavid1992@gmail.com"
-EMAIL_HOST_PASSWORD = "D020319f"
+EMAIL_HOST_USER = "martin.orteguita2020@gmail.com"
+EMAIL_HOST_PASSWORD = "ellocomartin"
